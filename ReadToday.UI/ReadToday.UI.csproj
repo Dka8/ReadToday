@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7464629D-D552-4DBD-AB4C-F222988E71C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ReadToday.UI</RootNamespace>
+    <AssemblyName>ReadToday.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=7.0.0.396, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.7.0.0.396\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Command\DelegateCommand.cs" />
+    <Compile Include="DataProvider\CBookRepository.cs" />
+    <Compile Include="DataProvider\CGenericRepository.cs" />
+    <Compile Include="DataProvider\CLookupDataService.cs" />
+    <Compile Include="DataProvider\CShelfRepository.cs" />
+    <Compile Include="DataProvider\CUserDataProvider.cs" />
+    <Compile Include="DataProvider\IBookLookupDataService.cs" />
+    <Compile Include="DataProvider\IBookRepository.cs" />
+    <Compile Include="DataProvider\IGenericRepository.cs" />
+    <Compile Include="DataProvider\ILiteraryGenreLookupDataService.cs" />
+    <Compile Include="DataProvider\IShelfLookupItemDataService.cs" />
+    <Compile Include="DataProvider\IShelfRepository.cs" />
+    <Compile Include="DataProvider\LookupClient.cs" />
+    <Compile Include="Dialogs\CMessageDialogService.cs" />
+    <Compile Include="Dialogs\IMessageDialogService.cs" />
+    <Compile Include="Dialogs\YesNoDialog.xaml.cs" />
+    <Compile Include="Events\CDetailDeletedEvent.cs" />
+    <Compile Include="Events\CDetailSavedEvent.cs" />
+    <Compile Include="Events\COpenEditViewEvent.cs" />
+    <Compile Include="Events\CUserLoginEvent.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Startup\CBootStrapper.cs" />
+    <Compile Include="ViewModel\CBookEditViewModel.cs" />
+    <Compile Include="ViewModel\CContentViewModel.cs" />
+    <Compile Include="ViewModel\CEditViewModelBase.cs" />
+    <Compile Include="ViewModel\CMainWindowModel.cs" />
+    <Compile Include="ViewModel\CNavigationItemViewModel.cs" />
+    <Compile Include="ViewModel\CNavigationViewModel.cs" />
+    <Compile Include="ViewModel\CShelfEditViewModel.cs" />
+    <Compile Include="ViewModel\CUserLoginViewModel.cs" />
+    <Compile Include="ViewModel\CViewModelBase.cs" />
+    <Compile Include="ViewModel\IContentViewModel.cs" />
+    <Compile Include="ViewModel\IEditViewModel.cs" />
+    <Compile Include="ViewModel\IShelfEditViewModel.cs" />
+    <Compile Include="View\BookEditView.xaml.cs">
+      <DependentUpon>BookEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ContentView.xaml.cs">
+      <DependentUpon>ContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NavigationView.xaml.cs">
+      <DependentUpon>NavigationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShelfEditView.xaml.cs">
+      <DependentUpon>ShelfEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserLoginView.xaml.cs">
+      <DependentUpon>UserLoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wrapper\CBookWrapper.cs" />
+    <Compile Include="Wrapper\CCharacterWrapper.cs" />
+    <Compile Include="Wrapper\CModelWrapper.cs" />
+    <Compile Include="Wrapper\CNotifyDataErrorInfoBase.cs" />
+    <Compile Include="Wrapper\CShelfWrapper.cs" />
+    <Page Include="Dialogs\YesNoDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Label.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\BookEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\NavigationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShelfEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserLoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Books.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReadToday.Contracts\ReadToday.Contracts.csproj">
+      <Project>{74C7633F-9909-4250-970C-47D169C2641C}</Project>
+      <Name>ReadToday.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReadToday.DataAccess\ReadToday.DataAccess.csproj">
+      <Project>{35058756-55c0-4e72-894e-0010b1fe4ed7}</Project>
+      <Name>ReadToday.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReadToday.Model\ReadToday.Model.csproj">
+      <Project>{a2637d5e-4491-4133-b2df-d687811e6cab}</Project>
+      <Name>ReadToday.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="ReadToday.UI.View.BookEditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="700"
+             Background="#333333" Padding="0 0 5 0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition MinWidth="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Title" Grid.Row="0" Grid.Column="0"  Margin="5"/>
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Text="{Binding Book.Title,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Content="Author" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <TextBox Grid.Row="1" Grid.Column="1"
+            Text="{Binding Book.Author,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Literary Genre" Margin="5"/>
+        <ComboBox Grid.Row="2" Grid.Column="1" Margin="0 10 0 10"
+                  ItemsSource="{Binding LiteraryGenres}"
+                  DisplayMemberPath="DisplayMember"
+                  SelectedValuePath="Id"
+                  SelectedValue="{Binding Book.LiteraryGenreId,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Content="Description" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <TextBox Grid.Row="3" Grid.Column="1"
+            Text="{Binding Book.Description, TargetNullValue='', Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+            TextWrapping="Wrap"/>
+
+        <DockPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
+            <StackPanel DockPanel.Dock="Right">
+                <Button Content="Add" Margin="10"
+                        Command="{Binding AddCharacterCommand}"/>
+                <Button Content="Remove" Margin="10"
+                        Command="{Binding RemoveCharacterCommand}"/>
+            </StackPanel>
+            <DataGrid ItemsSource="{Binding Characters}"
+                      SelectedValue="{Binding SelectedCharacter, Mode=TwoWay}"
+                      AutoGenerateColumns="False" RowHeaderWidth="0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Characters" Width="*"
+                                        Binding="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Button Content="Save" Command="{Binding SaveCommand}" Margin="5"/>
+            <Button Content="Delete" Command="{Binding DeleteCommand}" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

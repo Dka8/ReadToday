@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadToday.UI", "ReadToday.UI\ReadToday.UI.csproj", "{7464629D-D552-4DBD-AB4C-F222988E71C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadToday.DataAccess", "ReadToday.DataAccess\ReadToday.DataAccess.csproj", "{35058756-55C0-4E72-894E-0010B1FE4ED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadToday.Model", "ReadToday.Model\ReadToday.Model.csproj", "{A2637D5E-4491-4133-B2DF-D687811E6CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadToday.Contracts", "ReadToday.Contracts\ReadToday.Contracts.csproj", "{74C7633F-9909-4250-970C-47D169C2641C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadToday.Services", "ReadToday.Services\ReadToday.Services.csproj", "{AF8D0DCD-4A12-4F7F-ADC5-6AEBE29D34B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadToday.ConsoleHost", "ReadToday.ConsoleHost\ReadToday.ConsoleHost.csproj", "{3B3D306D-D217-4A1C-A199-4E15E81E7999}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7464629D-D552-4DBD-AB4C-F222988E71C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7464629D-D552-4DBD-AB4C-F222988E71C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7464629D-D552-4DBD-AB4C-F222988E71C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7464629D-D552-4DBD-AB4C-F222988E71C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35058756-55C0-4E72-894E-0010B1FE4ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35058756-55C0-4E72-894E-0010B1FE4ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35058756-55C0-4E72-894E-0010B1FE4ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35058756-55C0-4E72-894E-0010B1FE4ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2637D5E-4491-4133-B2DF-D687811E6CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2637D5E-4491-4133-B2DF-D687811E6CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2637D5E-4491-4133-B2DF-D687811E6CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2637D5E-4491-4133-B2DF-D687811E6CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C7633F-9909-4250-970C-47D169C2641C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C7633F-9909-4250-970C-47D169C2641C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C7633F-9909-4250-970C-47D169C2641C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C7633F-9909-4250-970C-47D169C2641C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF8D0DCD-4A12-4F7F-ADC5-6AEBE29D34B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8D0DCD-4A12-4F7F-ADC5-6AEBE29D34B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8D0DCD-4A12-4F7F-ADC5-6AEBE29D34B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8D0DCD-4A12-4F7F-ADC5-6AEBE29D34B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B3D306D-D217-4A1C-A199-4E15E81E7999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3D306D-D217-4A1C-A199-4E15E81E7999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3D306D-D217-4A1C-A199-4E15E81E7999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3D306D-D217-4A1C-A199-4E15E81E7999}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D53816BC-54AE-4B28-A514-D855E2DCC21F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://testpilotproject.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ReadToday.UI\\ReadToday.UI.csproj
+		SccProjectName1 = ReadToday.UI
+		SccLocalPath1 = ReadToday.UI
+		SccProjectUniqueName2 = ReadToday.DataAccess\\ReadToday.DataAccess.csproj
+		SccProjectName2 = ReadToday.DataAccess
+		SccLocalPath2 = ReadToday.DataAccess
+		SccProjectUniqueName3 = ReadToday.Model\\ReadToday.Model.csproj
+		SccProjectName3 = ReadToday.Model
+		SccLocalPath3 = ReadToday.Model
+		SccProjectUniqueName4 = ReadToday.Contracts\\ReadToday.Contracts.csproj
+		SccProjectName4 = ReadToday.Contracts
+		SccLocalPath4 = ReadToday.Contracts
+		SccProjectUniqueName5 = ReadToday.Services\\ReadToday.Services.csproj
+		SccProjectName5 = ReadToday.Services
+		SccLocalPath5 = ReadToday.Services
+		SccProjectUniqueName6 = ReadToday.ConsoleHost\\ReadToday.ConsoleHost.csproj
+		SccProjectName6 = ReadToday.ConsoleHost
+		SccLocalPath6 = ReadToday.ConsoleHost
+	EndGlobalSection
+EndGlobal

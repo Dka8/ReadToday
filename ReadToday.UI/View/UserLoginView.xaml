@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="ReadToday.UI.View.UserLoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ReadToday.UI.View"
+             mc:Ignorable="d" 
+             Background="#333333"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition MinWidth="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Login" Grid.Row="1" Grid.Column="1" Margin="5"/>
+        <TextBox Text="{Binding Login,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="2"/>
+
+        <Label Content="Password" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <TextBox Text="{Binding LoginInfo.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="2"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Login" Command="{Binding UserLoginCommand}" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
